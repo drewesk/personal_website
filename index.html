@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html class="blk-bkg" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=0.4">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link href="IMG/favicon.ico" rel="icon" type="image/x-icon"/>
+
+  <!--JQuery-->
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+
+  <!--styles-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/index.css">
+
+
+  <title>Andrew Eskenazi | Homepage</title>
+
+</head>
+<body>
+<div class="wrapper">
+  <header>
+  </header>
+  <nav id="navbarDisplay">
+  </nav>
+  <section>
+    <article>
+      <header id="headerDisplay">
+        <div class="name-heading"><h1>Andrew Eskenazi</h1></div>
+      </header>
+    </article>
+  </section>
+  <aside>
+
+    <section class="icon-bar">
+      <div class="iconBar">
+        <ul>
+          <a href="https://github.com/drewesk/" class="gh-icon">GitHub</a>
+          <a href="https://www.linkedin.com/in/andrew-eskenazi-848ab615/" class="li-icon">linked-in</a>
+          <a href="https://chess-x.herokuapp.com/" class='cx-icon'>Chess-X(RoR on Heroku)</a>
+        </ul>
+        <div class="sectionDesc"></div>
+      </div>
+    </section>
+    <figure>
+      <div id='slider' class='swipe'>
+        <div class='swipe-wrap'>
+          <div><img width="400" height="300"
+                    src="IMG/studio.jpg"
+                    alt=""/></div>
+          <div><h2>Bio</h2>
+            <div>Originally from Seattle I grew up amongst the mass of coffee shops and 'occasional' rainy days. Hobbies
+              consist of playing tons of online chess, cooking, making art, and coding. I hope to develop applications that
+              solve real-world problems and be apart of the constantly booming tech movement.
+            </div>
+          </div>
+          <div>
+            <h2>Contact</h2>
+            <div> Email: Drewesk@gmail.com</div>
+          </div>
+        </div>
+
+        <figcaption>
+
+
+          <button class="btn btn-success glyphicon glyphicon-step-backward" onclick='mySwipe.prev()'></button>
+          <button class="btn btn-success glyphicon glyphicon-step-forward" onclick='mySwipe.next()'></button>
+      </div>
+      </figcaption>
+    </figure>
+    <figure>
+      <div id="chart_div" style="width: 400px; height: 120px;"></div>
+    </figure>
+  </aside>
+</div>
+
+<footer>
+  <p class="footerText"> &#9400; 2017 | All Rights Reserved</p>
+</footer>
+
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="JS_Query/chart_guage.js"></script>
+<script src="JS_Query/navbar_show.js"></script>
+<script src="JS_Query/swipe.js"></script>
+<script>
+  window.mySwipe = new Swipe(document.getElementById('slider'), {
+    startSlide: 2,
+    speed: 400,
+    auto: 3000,
+    continuous: false,
+    disableScroll: false,
+    stopPropagation: false,
+    callback: function(index, elem) {
+    },
+    transitionEnd: function(index, elem) {
+    }
+  });
+
+  window.mySwipe = Swipe(document.getElementById('slider'));
+
+</script>
+
+
+</body>
+</html>
